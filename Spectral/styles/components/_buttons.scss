@@ -1,0 +1,36 @@
+@import '../abstracts/variables';
+
+.btn {
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    padding: 0.5rem 2rem;
+    border: 2px solid $light;
+    background-color: $light;
+    color: white;
+    &-dark {
+        border: 2px solid $dark;
+        background-color: $dark;
+    }
+    &-alert {
+        border: 2px solid $alert;
+        background-color: $alert;
+        &:hover {
+            background-color: darken($alert, 5%);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+        }
+    }
+    &-valid {
+        border: 2px solid $valid;
+        background-color: $valid;
+    }
+    &-disabled {
+        border: 2px solid $disabled;
+        background-color: $disabled;
+    }
+    &-outline {
+        background: transparent;
+        border-color: white;
+    }
+}

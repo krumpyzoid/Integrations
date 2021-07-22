@@ -1,0 +1,98 @@
+@import '../abstracts/variables';
+
+#intro {
+    .intro__text {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    padding: 7rem 0;
+    background: linear-gradient(-15deg, $light, adjust-hue($light, -30%));
+    h1, h2, p {
+        text-align: center;
+    }
+    .icon {
+        font-size: 3rem;
+        color: rgba(255,255,255,0.7);
+        transform: rotate(-45deg);
+    }
+    .icon-border {
+        position: relative;
+        border-radius: 3px;
+        padding: 1rem;
+        border: 2px solid rgba(0,0,0,0.2);
+        transform: rotate(45deg);
+        transition: 1s;
+        transition-property: padding, transform ;
+        overflow: hidden;
+        .glow {
+            position: absolute;
+            height: 200px;
+            width: 100px;
+            top: -2rem;
+            left: -8rem;
+            background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.5), rgba(255,255,255,0));
+        }
+        .line1 {
+            position: absolute;
+            height: 5rem;
+            background: white;
+            width: 1px;
+            top: 5rem;
+            left: 0rem;
+            background: linear-gradient(180deg, #fff, rgba(255,255,255,0));
+        }
+        .line2 {
+            position: absolute;
+            height: 1px;
+            background: white;
+            width: 5rem;
+            top: 0rem;
+            left: -5rem;
+            background: linear-gradient(-90deg, #fff, rgba(255,255,255,0));
+        }
+        .line3 {
+            position: absolute;
+            height: 5rem;
+            background: linear-gradient(0deg, #fff, rgba(255,255,255,0));;
+            width: 1px;
+            top: -5rem;
+            right: 0rem;
+        }
+        .line4 {
+            position: absolute;
+            height: 1px;
+            background: white;
+            width: 5rem;
+            bottom: 0rem;
+            left: 5rem;
+            background: linear-gradient(90deg, #fff, rgba(255,255,255,0));
+        }
+        &:hover .glow{
+            animation: glow 1s;
+        }
+        &:hover .line1 {
+            animation: line1 1500ms infinite linear;
+        }
+        &:hover .line2 {
+            animation: line2 1500ms infinite linear;
+            animation-delay: 750ms;
+        }
+        &:hover .line3 {
+            animation: line3 1500ms infinite linear;  
+        }
+        &:hover .line4 {
+            animation: line4 1500ms infinite linear;
+            animation-delay: 750ms;
+        }
+    }
+    .icon-border + .icon-border {
+        margin-left: 4rem;
+    }
+    .intro__icons {
+        margin-top: 6rem;
+    }
+    .line {
+        max-width: 740px;
+        margin: 2rem auto;
+    }
+}

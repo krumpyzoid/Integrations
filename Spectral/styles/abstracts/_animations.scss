@@ -1,0 +1,22 @@
+@keyframes jump {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+};
+
+@keyframes glow {
+    100% {transform: translateX(12rem) rotate(-10deg);}
+}
+
+@keyframes line1 {
+    100% { transform: translateY(-10rem); }
+}
+@keyframes line2 {
+    100% { transform: translateX(10rem); }
+}
+@keyframes line3 {
+    100% { transform: translateY(10rem); }
+}
+@keyframes line4 {
+    100% { transform: translateX(-10rem); }
+}

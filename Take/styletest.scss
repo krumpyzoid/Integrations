@@ -1,0 +1,56 @@
+$colours: (
+    primary: rgb(211, 95, 95),
+    secondary: rgb(60, 91, 194),
+    disabled: rgb(92, 92, 92),
+    dark: rgb(28, 30, 36),
+    light: rgb(211, 211, 211)
+);
+
+@mixin border($color) {
+    @if (lightness($color) > 20%) {
+        border-color: darken($color, 20%);
+    } @else {
+        border-color: lighten($color, 30%);
+    }
+}
+@mixin buttonhover($color) {
+    @if (lightness($color) < 80%) {
+        background-color: lighten($color, 10%);
+    } @else {
+        background-color: darken($color, 15%);
+    }
+}
+
+button {
+    display: inline-block;
+    margin: 0 1em;
+    padding: 1em 2em;
+    &.border {
+        border: 2px solid black;
+    }
+}
+
+@each $colour, $hex in $colours {
+    .btn-#{$colour} {
+        background-color: $hex;
+        @if (lightness($hex) < 50% ) {
+            color: white;
+        }
+        &.border {
+            @include border($hex);
+        }
+        &:hover {
+            @include buttonhover($hex);
+        }
+    }
+}
+
+.rounded {
+    border-radius: 2px;
+    &-5 {
+        border-radius: 5px;
+    }
+    &-10 {
+        border-radius: 10px;
+    }
+}

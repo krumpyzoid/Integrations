@@ -1,0 +1,203 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (min-width: 1200px) {
+     .container {
+       width: 1230px; };
+    }
+
+header {
+    padding: 0;
+    width: 100%;
+    height: 950px;
+    background-image: url('https://images.unsplash.com/photo-1620001791251-3c3177337334?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding-top: 2em;
+}
+
+header .container {
+    height: 100%;
+}
+
+header .row:nth-of-type(2) div:nth-of-type(1) {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.iphone {
+    width: 800px;
+    position: absolute;
+    right: 15%;
+}
+
+.logo {
+    color: black;
+    width: 35px;
+}
+
+section {
+    margin-top: 4em;
+}
+
+h2 {
+    margin-bottom: 1em;
+}
+
+#new .row div:nth-of-type(2) {
+    padding-top: 8em;
+}
+
+.box {
+    padding: 1.5em;
+    color: white;
+    height: 275px;
+    width: 100%;
+}
+
+.box-1 {
+    background-color: #F5979C;
+}
+.box-2 {
+    background-color: #615E7D;
+}
+.box-3 {
+    background: url('./images/box3.jpg');
+}
+.box-4 {
+    background: url('./images/box4.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 -10em;
+}
+.box-5 {
+    background-color: #81C99C;
+}
+
+.ng {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#details p, #details h6 {
+    color: #424242;
+}
+
+#picture {
+    height: 874px;
+    width: 100%;
+    background-image: url('https://images.unsplash.com/photo-1618987866919-a95b7d84d5d0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2046&q=80');
+    background-position: 0 -20em;
+    padding-bottom: 2em;
+}
+
+#picture .container {
+    height: 100%;
+}
+
+#picture h1,
+#picture p,
+#picture a {
+    color: white;
+}
+
+.arrow {
+    width: 25px;
+}
+
+#reasons {
+    margin-top: 0;
+    padding: 2em 0;
+    color: white;
+    background-color: #81C99C;
+}
+
+#reasons p, #mosaique p {
+    font-weight: 100;
+}
+
+.label {
+    display: inline-block;
+    padding: 0.4em 1.4em;
+    border-radius: 3px;
+    font-size: 0.7em;
+    background-color: lightgrey;
+}
+
+.popular {
+    background-color: purple;
+}
+
+.btn {
+    font-size: 0.7em;
+    padding: 1em 2em;
+    border-radius: 2px;
+    background-color: #81C99C;
+    border: none;
+    letter-spacing: 0.2em;
+}
+
+#pricing h2 {
+    margin-bottom: 0.5em;
+}
+
+.logiciel {
+    margin-top: 1em;
+    width: 50px;
+}
+
+footer {
+    margin-top: 4em;
+    height: 300px;
+    background: #192331;
+}
+
+footer ul {
+    list-style-type: none;
+    -moz-column-count: 3;
+    -moz-column-gap: 1em;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 1em;
+    column-count: 3;
+    column-gap: 1em;
+    font-size: 0.8em
+}
+
+footer h6, footer p {
+    font-size: 0.8em;
+}
+
+footer p {
+    font-weight: 100;
+}
+
+.h100 {
+    height: 100%;
+}
+
+.form-control {
+    border-radius: 2px;
+}
+
+.input-group-text {
+    border-radius: 2px;
+    border: 1px solid #81C99C;
+    background-color: #81C99C;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.input-group-text:hover {
+    background-color: #5fa178;
+    border-color: #81C99C;
+}
+
+.joke {
+    font-size: 0.7em;
+    opacity: 0.5;
+}

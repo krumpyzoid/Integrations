@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;600;700&family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap');
+$primary: #F5D3C8;
+$alert: #734B5E;
+
+@mixin small {
+    @media (max-width: 991px) {
+        @content
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1, h2, p {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: black;
+}
+p {
+    font-weight: 100;
+    & + img {
+        margin-top: 1rem;
+    }
+}
+h1 {
+    font-size: 5em;
+    font-weight: 700;
+}
+h2 {
+    font-size: 1.2em;
+    letter-spacing: 0.15em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+h3 {
+    color: black;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 0.2em;
+}
+p strong {
+    font-weight: 700 !important;
+}
+a {
+    color: lighten($alert, 10%);
+}
+
+#wrapper {
+    width: 100vw;
+    position: relative;
+}
+
+section, footer {
+    display: grid;
+    grid-template-columns: 40vw 60vw;
+    grid-template-rows: 1fr;
+    @include small {
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr;
+    }
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5rem;
+    background: linear-gradient(90deg, $primary, adjust-hue($primary, -10));
+    @include small {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        width: 100%;
+        h2 {
+            display: inline-block;
+        }
+    }
+}
+
+.content:not(#header header), .column-left__title:not(#header header) {
+    margin-top: 5rem;
+    @include small {
+        margin-top: 0;
+    }
+}
+
+.content {
+    @extend header;
+    background: white;
+}
+
+.column-left__title {
+    align-self: flex-end;
+    width: 400px;
+    text-align: right;
+    @include small {
+        align-self: start;
+        text-align: left;
+    }
+    h2 {
+        margin-bottom: 0;
+    }
+}
+
+#header {
+    height: 100vh;
+    a {
+        font-weight: 600;
+    }
+    header {
+        justify-content: center;
+    }
+    @include small {
+        height: 500px;
+    }
+    .content {
+        background: url('https://images.unsplash.com/photo-1480187818657-991dbbaf3d90?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        background-size: cover;
+        @include small {
+            height: 100vh;
+        }
+    }
+}
+
+.strength__list {
+    column-count: 2;
+    column-gap: 2rem;
+    min-width: 80%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    margin-bottom: 1rem;
+    i {
+        background: linear-gradient(0deg, $alert, lighten($alert, 10%));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 2rem;
+        position: relative;
+    }
+    tr {
+        height: 5rem;
+    }
+    td:nth-of-type(2n+1) {
+        width: 4rem;
+        text-align: center;
+    }
+}
+
+.btn {
+    display: inline-block;
+    height: auto;
+    width: auto;
+    padding: 1rem 3rem;
+    margin-left: 1rem;
+    text-transform: uppercase;
+    font-family: 'Raleway';
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: black;
+    letter-spacing: 0.1rem;
+    border-radius: 0.5rem;
+    border: 2px solid;
+    &-primary {
+        background: $primary;
+        border-color: $primary;
+        &:hover {
+            background-color: lighten($primary, 3%);
+            border-color: lighten($primary, 3%);
+            color: black;
+        }
+    }
+    &-outline {
+            background-color: transparent;
+            border-color:rgb(187, 187, 187);
+        &:hover {
+            border-color: $primary;
+            color: $primary;
+        }
+    }
+}
+
+#contact {
+    h3 {
+        font-size: 0.8em;
+        font-weight: 700;
+    }
+    a {
+        color: black;
+        text-decoration: none;
+        border-bottom: 1px dotted black;
+    }
+    p {
+        letter-spacing: 0.1rem;
+    }
+    li {
+        display: inline;
+        margin-left: 1rem;
+    }
+    i {
+        font-size: 2rem;
+        color: black;
+        transition-duration: 300ms;
+        &:hover {
+            transform: translate(0, -0.3rem);
+            color: lighten(black, 5%);
+        }
+    }
+    form .row {
+        padding: 0 0.7rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    form input {
+        display: inline-block;
+        max-width: 47%;
+        @include small {
+            display: block;
+            margin-bottom: 0.5rem;
+            width: 100%;
+        }
+    }
+    .form-control {
+        font-size: 1rem;
+        border-width: 2px;
+        font-family: 'Raleway';
+        &:focus {
+            outline: none;
+        }
+        &::placeholder {
+            letter-spacing: 0.1rem;
+            color: rgb(206, 206, 206);
+        }
+    }
+    textarea {
+        margin-top: 2rem;
+        height: 15rem;
+    }
+}
+
+footer {
+    a {
+        font-weight: 500
+    }
+    p {
+        text-align: center;
+    }
+}

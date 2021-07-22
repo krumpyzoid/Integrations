@@ -1,0 +1,50 @@
+.menu-toggle {
+    z-index: 15500;
+    color: white;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+}
+.icofont-navigation-menu {
+    font-size: 1.5rem;
+}
+.icofont-ui-close {
+    font-size: 1rem;
+}
+.layer {
+    width: calc(100vw - 20rem);
+    height: 100vh;
+    background: rgba(30, 38, 57, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9500;
+}
+.navigation {
+    position: fixed;
+    height: 100%;
+    width: 20rem;
+    right: 0rem;
+    background: teal;
+    padding-top: 2rem;
+    z-index: 10000;
+    ul {
+        list-style-type: none;
+        color: white;
+        padding: 2rem;
+    }
+    li {
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        font-size: 0.8rem;
+        transition: 0.5s;
+        &:hover {
+            transform: translateX(1rem);
+        }
+    }
+    li:not(:nth-last-of-type(1)) {
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+}
